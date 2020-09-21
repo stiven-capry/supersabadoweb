@@ -53,7 +53,7 @@
                     <input type="text" name="c1"> <br>
                     <input type="text" name="c2"> <br><br>
                     
-                    <label>Selecciona la operacion <br><br> <select name="listaoperadores">
+                    <label>Selecciona la operacion <br><br> <select name="lista">
                     <option value="ninguno">Seleccionar</option>
                     <option value="sumar">Sumar(+)</option>
                     <option value="restar">Restar(-)</option>
@@ -66,13 +66,9 @@
                 
                 
                 <?php  if(isset($_POST["botoncalcular"])): ?> 
-                <h4 class="text-danger">
+                <h4 >
                     <?php  
-                      $precioProducto1=$_POST["precio1"];
-                      $nombreProducto1=$_POST["producto1"];
-                      $costoEnvio=5000;
-                      $total=$precioProducto1+$costoEnvio;
-                      echo("El total de la compra es de: ".$total);
+                     
                     ?>
                 </h4>
                 <?php  endif ?>
