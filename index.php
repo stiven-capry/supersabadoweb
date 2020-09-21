@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=hea, initial-scale=1.0">
-    <title>Document</title>
+    <title>PrimerTaller</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
 </head>
@@ -22,19 +22,19 @@
                                 <a class="nav-link" href="index.php">Punto1<span class="sr-only">(current)</span></a>
                             </li>                            
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Punto2<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="punto2.php">Punto2<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Punto3<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="punto3.php">Punto3<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Punto4<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="punto4.php">Punto4<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Punto5<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="punto5.php">Punto5<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">punto6</a>
+                                <a class="nav-link" href="punto6.php">punto6</a>
                             </li>
                         </ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -51,24 +51,31 @@
                 <div class="col-4 ">   
                 
                 <form class="mt-3" action="index.php" method="POST" >
-                    <h4>Registro de compra</h4>
+                    <h4>Ingresar Datos</h4>
                     <div class="row">
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Producto1" name="producto1">
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Precio1($)" name="precio1">
-                        </div>
+                        </div> 
                     </div>
                     <button type="submit" class="btn btn-primary met-3 btn-block" name="botoncalcular" >Calcular</button>
                 </form> 
                 
-                <?php
-                    if(isset()){
-
-                    }
-                ?>
-
+                
+                <?php  if(isset($_POST["botoncalcular"])): ?> 
+                <h4 class="text-danger">
+                    <?php  
+                      $precioProducto1=$_POST["precio1"];
+                      $nombreProducto1=$_POST["producto1"];
+                      $costoEnvio=5000;
+                      $total=$precioProducto1+$costoEnvio;
+                      echo("El total de la compra es de: ".$total);
+                    ?>
+                </h4>
+                <?php  endif ?>
+                                    
                 </div>
             </div>
         </div>          
