@@ -4,7 +4,7 @@ $operacion = $_POST['lista'];
 echo 'El resultado es: ' ;
 
 switch($operacion)
-    {
+{
     case "sumar"; 
     echo $_POST["c1"] + $_POST["c2"]; 
     break;
@@ -18,9 +18,8 @@ switch($operacion)
     echo $_POST["c1"] / $_POST["c2"]; 
     break;
 
-    default:"No se ha podido realizar la operacion"
-        
-    } 
+    default:"No se ha podido realizar la operacion";
+} 
     
 
     
