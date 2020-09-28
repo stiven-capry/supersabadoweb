@@ -47,7 +47,7 @@
     <main>   
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-3 border border-dark">   
+                <div class="col-3 mt-4 border border-dark">   
             
                 <form  class="navbar-text" action="proc.php" method="POST" name="calc">
                     <label > CALCULADORA3000 </label><br><br>
