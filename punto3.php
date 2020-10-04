@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header>
+    
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.php">TALLER CALIFICATIVO</a>
@@ -45,9 +45,34 @@
             </div>
         </nav>
     </header>
-    </header>
+    
 
     <main>
+        <h2>Calcular Descuentos</h2>
+            <form action="punto3.php" method="post">
+                <p>Precio inicial: <input type="text" name="precio" /></p>
+                <p>Aplicar descuento del: 
+                5%: <input type="radio" name="des" value="5" />. .
+                10%: <input type="radio" name="des" value="10" />. .
+                20%: <input type="radio" name="des" value="20" />. .
+                30%: <input type="radio" name="des" value="30" />
+                </p>
+                <p><input type="submit" value="Ver resultado" /></p>
+            </form>
+            <?php  
+                function rebajas($base,$dto=0) {
+                    $ahorro = ($base*$dto)/100;
+                    $final = $base-$ahorro;
+                    return array($ahorro, $final);
+                    }
+                        $precio=$_POST['precio'];
+                        $descuento=$_POST['des'];			 
+                        list($rebaja,$precioFinal)=rebajas($precio,$descuento);
+                        echo "Precio inicial: $precio. <br/>";
+                        echo "artículo rebajado en un $descuento%. <br/>";
+                        echo "Este artículo está rebajado en $rebaja €. <br/>";
+                        echo "Precio final del artículo: $precioFinal €.";
+            ?>
     </main>
 
     <footer>

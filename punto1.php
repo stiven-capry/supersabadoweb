@@ -51,28 +51,28 @@
             
                 <form  class="navbar-text" action="proc.php" method="POST" name="calc">
                     <label > CALCULADORA3000 </label><br><br>
-                    <input type="text" name="c1"> <br>
-                    <input type="text" name="c2"> <br><br>
+                    <input type="text" class="form-control" placeholder="Numero1" name="c1"> <br>
                     
-                    <label>Selecciona la operacion <br><br> <select name="lista">
-                    <option value="ninguno">Seleccionar</option>
-                    <option value="sumar">Sumar(+)</option>
-                    <option value="restar">Restar(-)</option>
-                    <option value=multiplicar>Multiplicar(*)</option>
-                    <option value="dividir">Dividir(/)</option>
-                        </select>
-                    </label><br><br>
-                    <input class="btn btn-outline-success" type="submit" value="Ver Resultado">
+                    
+                    <div class="row-2" >
+                           <select class="form-control" name="lista">
+                                <option>operacion</option>
+                                <option value="sumar">+</option>
+                                <option value="restar">-</option>
+                                <option value="multiplicar">*</option>
+                                <option value="dividir">/</option>
+                           </select>
+                    </div><br>
+                    <input type="text" class="form-control" placeholder="Numero2" name="c2"> <br><br>
+
+                    <button type="submit" class="btn btn-primary mt-3 btn-block" name="calcular">Calcular</button>
+                    
                 </form> 
                 
                 
-                <?php  if(isset($_POST["botoncalcular"])): ?> 
-                <h4 >
-                    <?php  
-                     
-                    ?>
-                </h4>
-                <?php  endif ?>
+                <?php  if(isset($_POST["cal"])) ?> 
+                
+                
                            
                 </div>
             </div>
