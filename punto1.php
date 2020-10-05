@@ -50,7 +50,7 @@
                 <div class="col-3 mt-4 border border-dark">   
             
                 <form  class="navbar-text" action="proc.php" method="POST" name="calc">
-                    <label > CALCULADORA3000 </label><br><br>
+                    <label > CALCULADORA </label><br><br>
                     <input type="text" class="form-control" placeholder="Numero1" name="c1"> <br>
                     
                     

@@ -48,31 +48,31 @@
     
 
     <main>
-        <h2>Calcular Descuentos</h2>
-            <form action="punto3.php" method="post">
-                <p>Precio inicial: <input type="text" name="precio" /></p>
-                <p>Aplicar descuento del: 
-                5%: <input type="radio" name="des" value="5" />. .
-                10%: <input type="radio" name="des" value="10" />. .
-                20%: <input type="radio" name="des" value="20" />. .
-                30%: <input type="radio" name="des" value="30" />
-                </p>
-                <p><input type="submit" value="Ver resultado" /></p>
-            </form>
-            <?php  
-                function rebajas($base,$dto=0) {
-                    $ahorro = ($base*$dto)/100;
-                    $final = $base-$ahorro;
-                    return array($ahorro, $final);
-                    }
-                        $precio=$_POST['precio'];
-                        $descuento=$_POST['des'];			 
-                        list($rebaja,$precioFinal)=rebajas($precio,$descuento);
-                        echo "Precio inicial: $precio. <br/>";
-                        echo "artículo rebajado en un $descuento%. <br/>";
-                        echo "Este artículo está rebajado en $rebaja €. <br/>";
-                        echo "Precio final del artículo: $precioFinal €.";
-            ?>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8">
+            
+                <form class="mt-3"   method="POST" action="descuento.php">   
+                     <h4>Descuento de Zapatos </h4>
+                   
+                    <div class="row" >
+                        <div class="col">
+                           <input type="number" class="form-control" placeholder="cantidad de Zapatos" name="cantInputs">
+                           <input type="submit" name="" value="Generar">
+                        </div>
+                        <div class="col">
+                           <input type="number" class="form-control" placeholder="Total" name="total">
+                           <input type="submit" name="" value="gentotal">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary mt-3 btn-block" name="calcular">Calcular</button>        <br> 
+
+                </form>    
+            </div>
+          </div>
+        </div>
+
     </main>
 
     <footer>

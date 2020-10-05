@@ -47,8 +47,66 @@
     </header>
     </header>
 
-    <main>
+    <main> 
+        <div class="container">   
+            <div class="row justify-content-center">
+                <div class="col-4">            
+                    <form class="mt-3" action="punto4.php" method="POST">
+                
+                    <h4> Registro de compra </h4>
+                    
+                    <div class="row">
+                    <div class="col">
+                    <input type="numero" class="form-control" placeholder="horas" name="horas">
+                    </div>
+                
+                    <div class="col">
+                    <input type="number" class="form-control" placeholder="Precio1($)" name="precio1"></div>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary mt-3 btn-block" name="botonCalcular">Calcular</button>
+                    </form>
+
+            
+
+                        <?php 
+                
+                        if(isset($_POST["botonCalcular"]))
+                            {
+                            $horas= $_POST["horas"];
+                            $salario;
+                            $horasT;
+                            $horasE;
+                            $precioH= 20000;
+                            $precioE= 25000;
+                    
+                                
+                        if ($horas > 40 )
+                            {
+                            $horasE= $horas-40; 
+                            $salario= ($horasE*$precioE) +($horas*$precioH);
+                            echo($salario);
+                            echo("cantidad de horas extras " .$horasE);
+
+                            }
+
+                        else //if($horas <=40)                
+                            {
+                                $salario = $horas*$precioH;
+                                echo ($salario);
+                                
+                            }
+                            
+
+                            }
+                    ?>
+
+                    </div> 
+                </div> 
+            </div>
+        </div>
     </main>
+    
 
     <footer>
     </footer>

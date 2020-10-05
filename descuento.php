@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    
+    <header>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.php">TALLER CALIFICATIVO</a>
@@ -45,71 +45,26 @@
             </div>
         </nav>
     </header>
-    
+    </header>
 
     <main>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-8">
-            
-          
+        <form class="mt-3" action="descuento.php" method="POST">
+                <?php if (isset ($_POST["cantInputs"])) { ?>
+                           
+                <?php  for($i=1; $i<= $_POST["cantInputs"]; $i++) {?>
+                <input type="text" name="" value="contaco[]" placeholder="contacto"> <br>
+                <?php } ?>
+                <?php } ?>
+                <input type= "submit" value="PROCESAR">
+                <br> <br> <br> <br>
+                <?php  for($i=1; $i<= $_POST["total"]; $i++) {?>
+                <input type="text" name="" value="gentotal[]" placeholder="gentotal"> <br>
+                <?php } ?>
+                <?php  ?>
+                <input type= "submit" value="PROCESAR">
+                          
 
-                <form class="mt-3"   method="POST" action=punto7.php>   
-                     <h4>FRUTAS</h4>
-                   
-                    <div class="row" >
-                        <div class="col">
-                           <input type="text" class="form-control" placeholder="FRUTA1" name="valor" id="valor">
-                           <input type="submit" name="" value="añadir">
-                           <input type="hidden" name="valores" value="<?php echo implode(",", $_SESSION["data"]) ?>">
-                        </div>
-                        
-
-                        <div class="col">
-                           <input type="number" class="form-control" placeholder="LINK1" name="link">
-                           <input type="submit" name="" value="link">
-                           <input type="hidden" name="valores1" value="<?php echo implode(",", $_SESSION["data"]) ?>">
-                        </div>
-                    </div> 
-               
-
-                    <button type="submit" class="btn btn-primary mt-3 btn-block" name="calcular">Calcular</button>        <br>           
-                </form>
-
-
-                <?php 
-                    sesion_start();
-                    if(!isset($_SESSION["data"])){
-                     $_SESSION["data"] = array();
-                    }
-                ?>
-                
-                <?php
-                
-                session_start();
-                $valor = $_POST["valor"];
-
-                if (!empty($_POST["valores"])){
-                    $valores = explode(",",$_POST["valores"]);
-                }else{
-                    $valores =array();
-                }
-                
-                array_push($valores,$valor);
-
-                $_SESSION["data"] = $valores;
-
-                for($i=0; $i<5; $i++)
-                {
-                    echo $valores[$i]."<br/>";
-                }
-                ?> 
-          
-               
-
-            </div>
-          </div>
-        </div>
+        </form>
 
     </main>
 

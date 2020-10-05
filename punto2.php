@@ -75,14 +75,14 @@
                                          
                             $peso=$_POST["peso"]; 
                             $altura=$_POST["altura"];
-                            $p1="Peso Insuficiente";
-                            $p2="Normal";
-                            $p3="Sobrepeso G1";
-                            $p4="Sobrepeso G2";
-                            $p5="Obesidad I";
-                            $p6="Obesidad II";
-                            $p7="Obesidad III";
-                            $p8="Obesidad IV";
+                            $p1=" Peso Insuficiente";
+                            $p2=" Normal";
+                            $p3=" Sobrepeso G1";
+                            $p4=" Sobrepeso G2";
+                            $p5=" Obesidad I";
+                            $p6=" Obesidad II";
+                            $p7=" Obesidad III";
+                            $p8=" Obesidad IV";
 
                             $imc=$_POST["peso"] / ($_POST["altura"] * $_POST["altura"]);
 
